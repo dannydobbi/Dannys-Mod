@@ -24,18 +24,18 @@ public class WorldGenPlants implements IWorldGenerator
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		}
 	}
-		
-		private void generateSurface(World world, Random rand, int blockX, int blockZ) 
+
+	private void generateSurface(World world, Random rand, int blockX, int blockZ) 
+	{
+
+		for(int var5 = 0; var5 < 1; ++var5)
 		{
+			int var6 = blockX + rand.nextInt(16);
+			int var7 = rand.nextInt(128);
+			int var8 = blockZ + rand.nextInt(16);
 
-			for(int var5 = 0; var5 < 1; ++var5)
-			{
-				int var6 = blockX + rand.nextInt(16);
-				int var7 = rand.nextInt(128);
-				int var8 = blockZ + rand.nextInt(16);
+			//new WorldGenFlowers(Blocks.tomatoPlant.blockID).generate(world, rand, var6, var7, var8);
 
-				new WorldGenFlowers(Items.tomatoPlant.blockID).generate(world, rand, var6, var7, var8);
-
-			}
 		}
-		}
+	}
+}

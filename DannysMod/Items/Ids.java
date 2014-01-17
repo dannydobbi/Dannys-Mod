@@ -166,8 +166,8 @@ public class Ids {
 		public static int cheesePizza_actual;
 		public static int cheesePizza_default = 5047;
 		
-		public static int tomatoPlant_actual;
-		public static int tomatoPlant_default = 3840;
+	//	public static int tomatoPlant_actual;
+	//	public static int tomatoPlant_default = 3840;
 		
 		public static int Tomato_actual;
 		public static int Tomato_default = 5049;

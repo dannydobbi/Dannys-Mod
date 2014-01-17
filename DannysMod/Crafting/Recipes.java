@@ -20,6 +20,8 @@ public class Recipes {
 		//GENERAL
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.sLimestonefragment, 1), new ItemStack(Items.Limestonefragment), new ItemStack(Item.flint));
 		GameRegistry.addRecipe(new ItemStack(Item.arrow, 8), "L", "S", "F", Character.valueOf('L'), Items.sLimestonefragment, Character.valueOf('S'), Item.stick, Character.valueOf('F'), Item.feather);
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.Limestone, 2), "LL", "LL", Character.valueOf('L'), Items.Limestonefragment);
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.Limestonebrick, 2), "LL", "LL", Character.valueOf('L'), Blocks.Limestone);
 		
 		//TOOLS
 			//SWORDS

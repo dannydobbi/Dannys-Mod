@@ -20,14 +20,14 @@ public class WorldGenOres implements IWorldGenerator
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		switch (world.provider.dimensionId)
-	    {
-	    case 1:
-	      generateEnd(world, random, chunkX * 16, chunkZ * 16);
-	    case 0:
-	      generateSurface(world, random, chunkX * 16, chunkZ * 16);
-	    case -1:
-	      generateNether(world, random, chunkX * 16, chunkZ * 16);
-	    }
+		{
+		case 1:
+			generateEnd(world, random, chunkX * 16, chunkZ * 16);
+		case 0:
+			generateSurface(world, random, chunkX * 16, chunkZ * 16);
+		case -1:
+			generateNether(world, random, chunkX * 16, chunkZ * 16);
+		}
 	}
 
 	public int i;
@@ -55,7 +55,7 @@ public class WorldGenOres implements IWorldGenerator
 			(new WorldGenMinable(Blocks.illuminiteOre.blockID, 11)).generate(world, rand, Xcoord, YcoordSurface4, Zcoord);
 			(new WorldGenMinable(Blocks.pureOre.blockID, 10)).generate(world, rand, Xcoord, YcoordSurface4, Zcoord);
 			(new WorldGenMinable(Blocks.demoniteOre.blockID, 9)).generate(world, rand, Xcoord, YcoordSurface4, Zcoord);
-			(new WorldGenMinableLava(Blocks.Limestone.blockID, 15)).generate(world, rand, Xcoord, 128, Zcoord);
+			(new WorldGenMinable(Blocks.Limestone.blockID, 20)).generate(world, rand, Xcoord, YcoordSurface4, Zcoord);
 		}
 	}
 
@@ -74,6 +74,6 @@ public class WorldGenOres implements IWorldGenerator
 			(new WorldGenMinableNether(Blocks.corruptedilluminiteOre.blockID, 6)).generate(world, rand, Xcoord, 50, Zcoord);
 			(new WorldGenMinableNether(Blocks.corruptedpureOre.blockID, 5)).generate(world, rand, Xcoord, 40, Zcoord);
 			(new WorldGenMinableNether(Blocks.corrupteddemoniteOre.blockID, 3)).generate(world, rand, Xcoord, 15, Zcoord);
+		}
 	}
-}
 }
